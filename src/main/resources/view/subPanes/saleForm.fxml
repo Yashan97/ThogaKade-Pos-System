@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1043" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.SaleFormController">
+   <children>
+      <TextField editable="false" layoutX="317.0" layoutY="18.0" prefHeight="26.0" prefWidth="88.0" promptText="ID" />
+      <TextField editable="false" layoutX="467.0" layoutY="18.0" prefHeight="26.0" prefWidth="138.0" promptText="City" />
+      <TextField editable="false" layoutX="886.0" layoutY="17.0" prefHeight="26.0" prefWidth="130.0" promptText="Areas Balance" />
+      <TextField layoutX="651.0" layoutY="68.0" prefHeight="26.0" prefWidth="138.0" promptText="Quantity" />
+      <TextField editable="false" layoutX="467.0" layoutY="68.0" prefHeight="26.0" prefWidth="138.0" promptText="Unit Price" />
+      <TextField editable="false" layoutX="290.0" layoutY="68.0" prefHeight="26.0" prefWidth="116.0" promptText="Product Id" />
+      <TextField editable="false" layoutX="651.0" layoutY="18.0" prefHeight="26.0" prefWidth="138.0" promptText="Number" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/head-hunting_18229456.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="277.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/qr-code_15307862.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="431.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/house-cleaning_4767768.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="616.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/phone-call_13332851.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="820.0" layoutY="22.0" prefHeight="18.0" prefWidth="65.0" text="BALANCE" />
+      <TextField editable="false" layoutX="886.0" layoutY="67.0" prefHeight="26.0" prefWidth="130.0" promptText="0" />
+      <Label layoutX="806.0" layoutY="72.0" prefHeight="18.0" prefWidth="78.0" text="Available QTY" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="17.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/bookadd.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="413.0" layoutY="73.0" prefHeight="18.0" prefWidth="65.0" text="Unit Price" />
+      <Label layoutX="622.0" layoutY="73.0" prefHeight="18.0" prefWidth="28.0" text="QTY" />
+      <Label layoutX="265.0" layoutY="72.0" prefHeight="18.0" prefWidth="28.0" text="ID" />
+      <TextField layoutX="65.0" layoutY="19.0" prefHeight="25.0" prefWidth="182.0" promptText="Customer" />
+      <TextField fx:id="txtProduct1" layoutX="66.0" layoutY="66.0" prefHeight="25.0" prefWidth="182.0" promptText="Product " />
+      <TableView layoutX="14.0" layoutY="111.0" prefHeight="219.0" prefWidth="889.0">
+         <columns>
+            <TableColumn prefWidth="111.19999694824219" text="Bill No" />
+            <TableColumn prefWidth="178.39996337890625" text="Product Name" />
+            <TableColumn prefWidth="98.4000244140625" text="Bar Code" />
+            <TableColumn prefWidth="92.00006103515625" text="QTY" />
+            <TableColumn prefWidth="125.60009765625" text="Symbol" />
+            <TableColumn prefWidth="131.199951171875" text="Unit Price" />
+            <TableColumn prefWidth="158.40008544921875" text="Totla Price" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="917.0" layoutY="146.0" onAction="#btnAdd" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #295F98;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="917.0" layoutY="196.0" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #F79A19;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="917.0" layoutY="245.0" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #CF0F0F;" text="Remove All" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecf6ff" height="219.0" layoutX="701.0" layoutY="346.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="326.0" />
+      <JFXButton layoutX="704.0" layoutY="576.0" prefHeight="46.0" prefWidth="162.0" style="-fx-background-color: #FFCC00;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="878.0" layoutY="577.0" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: #08CB00;" text="PAY &amp; BILL" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="705.0" layoutY="405.0" prefHeight="24.0" prefWidth="162.0" text="SUB TOTAL :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="699.0" layoutY="475.0" prefHeight="30.0" prefWidth="170.0" text="TOTAL AMOUNT :" textFill="RED">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="707.0" layoutY="444.0" prefHeight="24.0" prefWidth="162.0" text="DISCOUNT AMOUNT :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="699.0" layoutY="514.0" prefHeight="38.0" prefWidth="170.0" text="BLANCE :">
+         <font>
+            <Font name="Arial Black" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffad" height="279.0" layoutX="16.0" layoutY="344.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="662.0" />
+      <TextField layoutX="533.0" layoutY="407.0" opacity="0.69" prefHeight="26.0" prefWidth="124.0" promptText="Customer">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="448.0" layoutY="412.0" prefHeight="18.0" prefWidth="78.0" text="No of QTY :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="533.0" layoutY="441.0" opacity="0.69" prefHeight="26.0" prefWidth="124.0" promptText="Customer">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="438.0" layoutY="446.0" prefHeight="18.0" prefWidth="88.0" text="No of Items :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="123.0" layoutX="26.0" layoutY="490.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="643.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="511.0" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: #FFCC00;" text="PAID AMOUNT ">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="266.0" layoutY="538.0" prefHeight="26.0" prefWidth="182.0" promptText="CASH" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="511.0" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: #FFCC00;" text="PAYMENT TYPE ">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="475.0" layoutY="542.0" prefHeight="26.0" prefWidth="182.0" promptText="RS.00" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="483.0" layoutY="511.0" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: #CF0F0F;" text="CREDIT BLANCE" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="405.0" prefHeight="18.0" prefWidth="150.0" text="DISCOUNT AMOUNT :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="448.0" prefHeight="18.0" prefWidth="150.0" text="DISCOUNT RATE:">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="426.0" prefHeight="18.0" prefWidth="150.0" text="OR">
+         <font>
+            <Font name="Arial Black" size="9.0" />
+         </font>
+      </Label>
+      <TextField layoutX="57.0" layoutY="543.0" prefHeight="25.0" prefWidth="170.0" promptText="0.00" />
+      <TextField editable="false" layoutX="880.0" layoutY="406.0" prefHeight="26.0" prefWidth="138.0" promptText="0.00">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="881.0" layoutY="441.0" prefHeight="26.0" prefWidth="138.0" promptText="0.00">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="880.0" layoutY="475.0" prefHeight="26.0" prefWidth="138.0" promptText="0.00">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="881.0" layoutY="511.0" prefHeight="46.0" prefWidth="138.0" promptText="0.00">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d4c68" height="46.0" layoutX="701.0" layoutY="346.0" stroke="BLACK" strokeType="INSIDE" width="326.0" />
+      <Label alignment="CENTER" layoutX="728.0" layoutY="356.0" prefHeight="25.0" prefWidth="288.0" text="TOTAL BILL CALCULATION" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d4c68" height="46.0" layoutX="17.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="662.0" />
+      <Label alignment="CENTER" layoutX="40.0" layoutY="346.0" prefHeight="38.0" prefWidth="627.0" text="BILL CALCULATION" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField layoutX="198.0" layoutY="404.0" prefHeight="25.0" prefWidth="182.0" promptText="Discount" />
+      <JFXComboBox layoutX="194.0" layoutY="445.0" prefHeight="26.0" prefWidth="182.0" promptText="10%" />
+   </children>
+</AnchorPane>
