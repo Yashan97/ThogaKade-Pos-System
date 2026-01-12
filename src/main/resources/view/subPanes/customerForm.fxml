@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="630" prefWidth="1043" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.CustomerFormcontroller">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#btnAllViewCustomer" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: #FFD41D;" text="View All Customer" />
+      <JFXButton layoutX="153.0" layoutY="14.0" onAction="#btnAddCustoemr" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: #1C4D8D;" text="Add Customer" textFill="WHITE" />
+      <JFXButton layoutX="291.0" layoutY="14.0" onAction="#btnCustomerReport" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: #4C763B;" text="Customer Report" textFill="WHITE" />
+      <AnchorPane fx:id="ancCustomer" layoutX="16.0" layoutY="61.0" prefHeight="562.0" prefWidth="1018.0" />
+      <JFXButton layoutX="902.0" layoutY="14.0" onAction="#btnSaveExcel" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: #1C4D8D;" text="Save" textFill="WHITE" />
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="909.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icon/bookadd.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
