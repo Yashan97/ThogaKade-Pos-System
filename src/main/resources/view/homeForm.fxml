@@ -131,9 +131,16 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="894.0" layoutY="23.0" prefHeight="18.0" prefWidth="110.0" text="Time :    10.:22 PM" />
-      <Label layoutX="736.0" layoutY="25.0" prefHeight="18.0" prefWidth="130.0" text="Date : 2026-01-11" />
-      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="691.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="lblTime" layoutX="894.0" layoutY="23.0" prefHeight="18.0" prefWidth="130.0" text=" 10.22 PM">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="735.0" layoutY="23.0" prefHeight="18.0" prefWidth="130.0" text=" 2026-01-11">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></Label>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="689.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Icon/scheduling_5576138.png" />
          </image>
@@ -143,8 +150,11 @@
             <Image url="@../Icon/clock_621685.png" />
          </image>
       </ImageView>
-      <Label layoutX="1068.0" layoutY="23.0" prefHeight="18.0" prefWidth="138.0" text="User Name" />
-      <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="1024.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="1061.0" layoutY="23.0" prefHeight="18.0" prefWidth="138.0" text="User Name">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></Label>
+      <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="1006.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Icon/user_8579829.png" />
          </image>
