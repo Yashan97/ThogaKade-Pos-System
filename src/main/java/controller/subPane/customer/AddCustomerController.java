@@ -4,6 +4,7 @@ import dbConnection.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import utill.CRUDUtill;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,13 +21,19 @@ public class AddCustomerController {
     public TextField txtBlance;
     public DatePicker txtDate;
     public TextField txtCusId;
+    public TextField txtSummeryName;
+    public TextField txtSummryID;
+    public TextField txtSummryNumber;
+    public TextField txtTotalOrder;
+    public TextField txtSummeryBlance;
+    public TextField txtSummeryLastVisit;
 
     public void btnSearchCustomer(ActionEvent event) {
         try {
-            Connection connection = DBConnection.getInstance().getConnection();
-            PreparedStatement psTm = connection.prepareStatement("SELECT * from Customer WHERE cusName LIKE ?");
-            psTm.setString(1,"%"+txtSearchCustomer.getText()+"%");
-            ResultSet resultSet = psTm.executeQuery();
+            String keyword ="%"+txtSearchCustomer.getText()+"%";
+            ResultSet resultSet = CRUDUtill.execute("SELECT * FROM Customer WHERE cusID LIKE ? OR cusName LIKE ? OR contactNumber1 LIKE ?",
+                    keyword,keyword,keyword);
+
             if (resultSet.next()){
                 txtCustomerName.setText(resultSet.getString("cusName"));
                 txtCusId.setText(resultSet.getString("cusID"));
@@ -36,6 +43,11 @@ public class AddCustomerController {
                 txtAddress.setText(resultSet.getString("address"));
                 txtBlance.setText(String.valueOf(resultSet.getDouble("outStanding")));
                 txtDate.getEditor().setText(resultSet.getString("registerDate"));
+
+                txtSummeryName.setText(resultSet.getString("cusName"));
+                txtSummryID.setText(String.valueOf(resultSet.getInt("cusID")));
+                txtSummryNumber.setText(String.valueOf(resultSet.getInt("contactNumber1")));
+                txtSummeryBlance.setText(String.valueOf(resultSet.getDouble("outStanding")));
 
             }
         } catch (SQLException e) {

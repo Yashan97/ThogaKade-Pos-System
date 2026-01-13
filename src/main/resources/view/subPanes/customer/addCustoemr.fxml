@@ -101,14 +101,14 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField editable="false" layoutX="739.0" layoutY="246.0" prefHeight="26.0" prefWidth="230.0" promptText="Saman Kumara" />
-      <TextField editable="false" layoutX="739.0" layoutY="277.0" prefHeight="26.0" prefWidth="230.0" promptText="1997" />
-      <TextField editable="false" layoutX="739.0" layoutY="310.0" prefHeight="26.0" prefWidth="230.0" promptText="077xxxxxxx" />
+      <TextField fx:id="txtSummeryName" editable="false" layoutX="739.0" layoutY="246.0" prefHeight="26.0" prefWidth="230.0" promptText="Saman Kumara" />
+      <TextField fx:id="txtSummryID" editable="false" layoutX="739.0" layoutY="277.0" prefHeight="26.0" prefWidth="230.0" promptText="1997" />
+      <TextField fx:id="txtSummryNumber" editable="false" layoutX="739.0" layoutY="310.0" prefHeight="26.0" prefWidth="230.0" promptText="077xxxxxxx" />
       <Label layoutX="644.0" layoutY="363.0" prefHeight="18.0" prefWidth="74.0" text="Total Order" />
       <Label layoutX="643.0" layoutY="393.0" prefHeight="18.0" prefWidth="74.0" text="Outstanding" />
       <Label layoutX="643.0" layoutY="417.0" prefHeight="32.0" prefWidth="104.0" text="Ladst Visit" />
-      <TextField editable="false" layoutX="739.0" layoutY="357.0" prefHeight="26.0" prefWidth="230.0" promptText="20" />
-      <TextField editable="false" layoutX="739.0" layoutY="388.0" prefHeight="26.0" prefWidth="230.0" promptText="2145.00" />
-      <TextField editable="false" layoutX="739.0" layoutY="421.0" prefHeight="26.0" prefWidth="230.0" promptText="2025-10-3" />
+      <TextField fx:id="txtTotalOrder" editable="false" layoutX="739.0" layoutY="357.0" prefHeight="26.0" prefWidth="230.0" promptText="20" />
+      <TextField fx:id="txtSummeryBlance" editable="false" layoutX="739.0" layoutY="388.0" prefHeight="26.0" prefWidth="230.0" promptText="2145.00" />
+      <TextField fx:id="txtSummeryLastVisit" editable="false" layoutX="739.0" layoutY="421.0" prefHeight="26.0" prefWidth="230.0" promptText="2025-10-3" />
    </children>
 </AnchorPane>
