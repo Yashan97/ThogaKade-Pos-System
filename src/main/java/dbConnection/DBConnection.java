@@ -15,7 +15,7 @@ public class DBConnection {
     public Connection getConnection(){
         return connection;
     }
-    public  DBConnection getInstance() throws SQLException {
+    public static DBConnection getInstance() throws SQLException {
         if (instance == null){
             return  new DBConnection();
         }else {
