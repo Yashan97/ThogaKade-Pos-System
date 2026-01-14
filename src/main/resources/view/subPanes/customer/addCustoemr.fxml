@@ -69,7 +69,7 @@
             <Image url="@../../../Icon/scheduling_5576138.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="440.0" layoutY="294.0" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #00712D;" text="Save" textFill="WHITE" />
+      <JFXButton layoutX="440.0" layoutY="294.0" onAction="#btnAddCustomer" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #00712D;" text="Save" textFill="WHITE" />
       <JFXButton layoutX="441.0" layoutY="356.0" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #6FDCE3;" text="Update" textFill="WHITE" />
       <JFXButton layoutX="441.0" layoutY="414.0" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #FF0000;" text="Delete" textFill="WHITE" />
       <JFXButton layoutX="441.0" layoutY="470.0" prefHeight="46.0" prefWidth="137.0" style="-fx-background-color: #FDDE55;" text="All Customer Report" />

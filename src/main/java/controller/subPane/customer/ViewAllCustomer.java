@@ -10,7 +10,6 @@ import model.Customer;
 import utill.CRUDUtill;
 
 import java.net.URL;
-import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class ViewAllCustomer implements Initializable {
 
     public void loadTable(){
         try {
-            ResultSet resultSet = CRUDUtill.execute("SELECT * FROM Customer");
+            ResultSet resultSet = CRUDUtill.executeQuery("SELECT * FROM Customer");
             while (resultSet.next()){
                 customerArray.add(new Customer(
                         resultSet.getInt(1),

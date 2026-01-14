@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CRUDUtill {
-    public static <T>T execute(String sql , Object ... args) throws SQLException {
+    public static <T>T executeQuery(String sql , Object ... args) throws SQLException {
         PreparedStatement psTm = DBConnection.getInstance().getConnection().prepareStatement(sql);
         for (int i = 0; i <args.length; i++) {
             psTm.setObject((i+1),args[i]);
@@ -13,5 +13,12 @@ public class CRUDUtill {
            return (T)psTm.executeQuery();
         }
         return (T)(Boolean)(psTm.executeUpdate()>0);
+    }
+    public static <X>X executeUpdate(String sql, Object ... args) throws SQLException {
+        PreparedStatement psTm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        for (int i = 0; i < args.length; i++) {
+            psTm.setObject(i + 1, args[i]);
+        }
+        return (X)(Boolean)(psTm.executeUpdate()>0);
     }
 }
