@@ -89,9 +89,27 @@ public class AddCustomerController {
                     name, num1, num2, city, address, blance, date , id);
             if(i>0){
                 new Alert(Alert.AlertType.CONFIRMATION,"Update Success").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Not Update").show();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void btnDelete(ActionEvent event) {
+        String id = txtCusId.getText();
+        int i = 0;
+        try {
+            i = CRUDUtill.executeUpdate("DELETE FROM Customer WHERE cusID = ?", id);
+            if (i>0){
+                new Alert(Alert.AlertType.CONFIRMATION,"Customer Deleted!").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Not Deleted!").show();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
