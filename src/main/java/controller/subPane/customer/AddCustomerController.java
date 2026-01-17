@@ -69,9 +69,29 @@ public class AddCustomerController {
             LocalDate date = txtDate.getValue();
             int x = CRUDUtill.executeUpdate("INSERT INTO Customer (cusName, contactNumber1, contactNumber2 , city,address,outStanding,registerDate) VALUES (?,?,?,?,?,?,?)",
                     name,num1,num2,city,address,blacnce,date);
-            if (x>=0){
+            if (x>0){
                 new Alert(Alert.AlertType.CONFIRMATION,"Customer add").show();
             }
+        }
+    }
+
+    public void btnUpdate(ActionEvent event) {
+        try {
+            String name = txtCustomerName.getText();
+            int num1 = Integer.parseInt(txtContactNumber1.getText());
+            int num2 = Integer.parseInt(txtContactNumber2.getText());
+            String city = txtCity.getText();
+            String address = txtAddress.getText();
+            String blance = txtBlance.getText();
+            LocalDate date = txtDate.getValue();
+            String id = txtCusId.getText();
+            int i = CRUDUtill.executeUpdate("UPDATE Customer SET cusName = ? ,contactNumber1 = ? , contactNumber2 = ? , city = ? , address = ? , outStanding = ? , registerDate = ? WHERE cusID = ?",
+                    name, num1, num2, city, address, blance, date , id);
+            if(i>0){
+                new Alert(Alert.AlertType.CONFIRMATION,"Update Success").show();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }
