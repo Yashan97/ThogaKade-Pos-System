@@ -2,9 +2,11 @@ package controller.subPane.customer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
 import utill.CRUDUtill;
@@ -24,6 +26,15 @@ public class ViewAllCustomer implements Initializable {
     public TableColumn colCity;
     public TableColumn colAddrerss;
     public TableColumn colBlance;
+    public TextField txtId;
+    public TextField txtSearchCustomer;
+    public TextField txtName;
+    public TextField txtCity;
+    public TextField txtNum1;
+    public TextField txtNum2;
+    public TextField txtBalance;
+    public TextField txtaddress;
+
 
     ArrayList<Customer>customerArray = new ArrayList<>();
 
@@ -63,5 +74,27 @@ public class ViewAllCustomer implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadTable();
+    }
+
+    public void btnSearchCustomer(ActionEvent event) {
+
+        try {
+            String keyword = "%"+txtSearchCustomer.getText()+"%";
+            ResultSet resultSet = CRUDUtill.executeQuery("SELECT * FROM Customer WHERE cusID LIKE ? OR cusName LIKE ? OR contactNumber1 LIKE ?",
+                    keyword,keyword,keyword);
+            if (resultSet.next()){
+                txtName.setText(resultSet.getString("cusName"));
+                txtId.setText(String.valueOf(resultSet.getInt("cusID")));
+                txtNum1.setText(String.valueOf(resultSet.getInt("contactNumber1")));
+                txtNum2.setText(String.valueOf(resultSet.getInt("contactNumber2")));
+                txtCity.setText(resultSet.getString("city"));
+                txtaddress.setText(resultSet.getString("්address"));
+                txtBalance.setText(String.valueOf(resultSet.getDouble("outStanding")));
+
+                
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

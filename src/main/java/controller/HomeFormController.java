@@ -29,7 +29,7 @@ public class HomeFormController implements Initializable {
     public void btnProduct(ActionEvent event) {
         try {
             AnchorPane pane = FXMLLoader.load(
-                    getClass().getResource("/view/subPanes/productForm.fxml")
+                    getClass().getResource("/view/subPanes/product/productForm.fxml")
             );
 
 

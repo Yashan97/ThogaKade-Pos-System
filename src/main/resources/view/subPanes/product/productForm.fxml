@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="630" prefWidth="1043" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.product.ProductFormController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#btnAllProduct" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #F5BF0F;" text="All Products" />
+      <JFXButton layoutX="144.0" layoutY="14.0" onAction="#btnAddProduct" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #0CDC2A;" text="Add Products" />
+      <JFXButton layoutX="274.0" layoutY="14.0" onAction="#btnAddCategory" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #005BB3;" text="Add Category" textFill="WHITE" />
+      <JFXButton layoutX="403.0" layoutY="14.0" onAction="#btnMostSellingProduct" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #8E55C4;" text="Most Selling Product" textFill="WHITE" />
+      <JFXButton layoutX="576.0" layoutY="14.0" onAction="#btnProductReport" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #41D2EF;" text="Product Reports" />
+      <AnchorPane fx:id="ancProduct" layoutX="5.0" layoutY="62.0" prefHeight="566.0" prefWidth="1035.0" />
+   </children>
+</AnchorPane>
