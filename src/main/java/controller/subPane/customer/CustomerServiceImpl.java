@@ -15,8 +15,17 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean updateCustomer(Customer customer) {
-        return false;
+    public boolean updateCustomer(Customer customer) throws SQLException {
+        int i = CRUDUtill.executeUpdate("UPDATE Customer SET cusName = ? ,contactNumber1 = ? , contactNumber2 = ? , city = ? , address = ? , outStanding = ? , registerDate = ? WHERE cusID = ?",
+                customer.getCusName(),
+                customer.getContactNumber1(),
+                customer.getContactNumber2(),
+                customer.getCity(),
+                customer.getAddress(),
+                customer.getOutStanding(),
+                customer.getRegisterDate(),
+                customer.getCusId());
+        return i>0;
     }
 
     @Override

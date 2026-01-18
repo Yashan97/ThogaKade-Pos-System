@@ -41,4 +41,16 @@ public class Customer {
         this.registerDate = registerDate;
 
     }
+
+    public Customer(String name, int num1, int num2, String city, String address, double blance, LocalDate date, int id) {
+        this.cusName = name;
+        this.contactNumber1 = num1;
+        this.contactNumber2 = num2;
+        this.city = city;
+        this.address =address;
+        this.outStanding = blance;
+        this.registerDate= date;
+        this.cusId = id;
+
+    }
 }

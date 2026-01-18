@@ -82,12 +82,12 @@ public class AddCustomerController {
             int num2 = Integer.parseInt(txtContactNumber2.getText());
             String city = txtCity.getText();
             String address = txtAddress.getText();
-            String blance = txtBlance.getText();
+            double blance = Double.parseDouble(txtBlance.getText());
             LocalDate date = txtDate.getValue();
-            String id = txtCusId.getText();
-            int i = CRUDUtill.executeUpdate("UPDATE Customer SET cusName = ? ,contactNumber1 = ? , contactNumber2 = ? , city = ? , address = ? , outStanding = ? , registerDate = ? WHERE cusID = ?",
-                    name, num1, num2, city, address, blance, date , id);
-            if(i>0){
+            int id = Integer.parseInt(txtCusId.getText());
+            Customer customer = new Customer(name, num1, num2, city, address, blance, date , id);
+
+            if(new CustomerServiceImpl().updateCustomer(customer)){
                 new Alert(Alert.AlertType.CONFIRMATION,"Update Success").show();
             }else {
                 new Alert(Alert.AlertType.ERROR,"Not Update").show();
