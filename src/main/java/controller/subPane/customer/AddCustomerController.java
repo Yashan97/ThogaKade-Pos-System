@@ -5,8 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import model.Customer;
 import utill.CRUDUtill;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -56,22 +58,20 @@ public class AddCustomerController {
     }
 
     public void btnAddCustomer(ActionEvent event) throws SQLException {
-        int contact1 = Integer.parseInt(txtContactNumber1.getText());
-        Integer contact2 = txtContactNumber2.getText().isEmpty()? null: Integer.parseInt(txtContactNumber2.getText());
-        ResultSet resultSet = CRUDUtill.executeQuery("SELECT * FROM Customer WHERE contactNumber1 = ? OR contactNumber2 = ?", contact2, contact1);
-        if (!resultSet.next()){
-            String name = txtCustomerName.getText();
-            int num1 = Integer.parseInt(txtContactNumber1.getText());
-            int num2 = Integer.parseInt(txtContactNumber2.getText());
-            String city = txtCity.getText();
-            String address = txtAddress.getText();
-            double blacnce = Double.parseDouble(txtBlance.getText());
-            LocalDate date = txtDate.getValue();
-            int x = CRUDUtill.executeUpdate("INSERT INTO Customer (cusName, contactNumber1, contactNumber2 , city,address,outStanding,registerDate) VALUES (?,?,?,?,?,?,?)",
-                    name,num1,num2,city,address,blacnce,date);
-            if (x>0){
-                new Alert(Alert.AlertType.CONFIRMATION,"Customer add").show();
-            }
+        String name = txtCustomerName.getText();
+        int num1 = Integer.parseInt(txtContactNumber1.getText());
+        int num2 = Integer.parseInt(txtContactNumber2.getText());
+        String city = txtCity.getText();
+        String address = txtAddress.getText();
+        double blance = Double.parseDouble(txtBlance.getText());
+        LocalDate date = txtDate.getValue();
+
+        Customer customer = new Customer(name,num1,num2,city,address,blance,date);
+        if (new CustomerServiceImpl().addCustomer(customer)){
+            new Alert(Alert.AlertType.INFORMATION,"Customer Added Success").show();
+
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Customer Not Added! ").show();
         }
     }
 

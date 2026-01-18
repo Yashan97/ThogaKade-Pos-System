@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,7 +18,7 @@ public class Customer {
     private String city;
     private String address;
     private Double outStanding;
-    private int registerDate;
+    private LocalDate registerDate;
     private String customerImg;
 
     public Customer(int cusId, String cusName, int contactNumber1, int contactNumber2, String city, String address, double outStanding) {
@@ -26,5 +29,16 @@ public class Customer {
         this.city =city;
         this.address = address;
         this.outStanding = outStanding;
+    }
+
+    public Customer(String cusName, int contactNumber1, int contactNumber2, String city, String address, double outStanding, LocalDate registerDate) {
+        this.cusName = cusName;
+        this.contactNumber1 = contactNumber1;
+        this.contactNumber2 = contactNumber2;
+        this.city = city;
+        this.address = address;
+        this.outStanding = outStanding;
+        this.registerDate = registerDate;
+
     }
 }

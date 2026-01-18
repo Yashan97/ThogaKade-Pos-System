@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="566" prefWidth="1035" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.product.AddProductController">
    <children>
-      <TextField fx:id="txtSearchProduct" layoutX="68.0" layoutY="37.0" prefHeight="26.0" prefWidth="295.0" promptText="Search Product" />
-      <JFXButton layoutX="370.0" layoutY="38.0" onAction="#btnSearch" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #F5BF0F;" text="Search" />
-      <TextField fx:id="txtItemCode" layoutX="68.0" layoutY="88.0" prefHeight="26.0" prefWidth="295.0" promptText="Item Code" />
-      <TextField fx:id="txtDescription" layoutX="68.0" layoutY="130.0" prefHeight="26.0" prefWidth="295.0" promptText="Description" />
-      <TextField fx:id="txtPackSize" layoutX="68.0" layoutY="172.0" prefHeight="26.0" prefWidth="295.0" promptText="PackSize" />
-      <TextField fx:id="txtQTY" layoutX="68.0" layoutY="250.0" prefHeight="26.0" prefWidth="295.0" promptText="QtyOnHand" />
-      <JFXButton layoutX="68.0" layoutY="298.0" onAction="#btnAddItem" prefHeight="62.0" prefWidth="122.0" style="-fx-background-color: #67CA16;" text="Add Item " />
-      <JFXButton layoutX="222.0" layoutY="298.0" onAction="#btnDeleteItem" prefHeight="62.0" prefWidth="122.0" style="-fx-background-color: #FC0C04;" text="Delete Item" />
-      <JFXButton layoutX="370.0" layoutY="298.0" onAction="#btnUpdateItem" prefHeight="62.0" prefWidth="122.0" style="-fx-background-color: #10EDF5;" text="Update Item" />
-      <TextField fx:id="txtUnitPrice" layoutX="69.0" layoutY="212.0" prefHeight="26.0" prefWidth="295.0" promptText="Unit Price" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff31" height="387.0" layoutX="14.0" layoutY="14.0" opacity="0.38" stroke="BLACK" strokeType="INSIDE" width="547.0" />
+      <TextField fx:id="txtSearchProduct" layoutX="69.0" layoutY="89.0" prefHeight="26.0" prefWidth="295.0" promptText="Search Product" />
+      <JFXButton layoutX="408.0" layoutY="89.0" onAction="#btnSearch" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #F5BF0F;" text="Search" />
+      <TextField fx:id="txtItemCode" layoutX="69.0" layoutY="143.0" prefHeight="26.0" prefWidth="295.0" promptText="Item Code" />
+      <TextField fx:id="txtDescription" layoutX="69.0" layoutY="195.0" prefHeight="26.0" prefWidth="295.0" promptText="Description" />
+      <TextField fx:id="txtPackSize" layoutX="69.0" layoutY="244.0" prefHeight="26.0" prefWidth="295.0" promptText="PackSize" />
+      <TextField fx:id="txtQTY" layoutX="69.0" layoutY="352.0" prefHeight="26.0" prefWidth="295.0" promptText="QtyOnHand" />
+      <JFXButton layoutX="584.0" layoutY="249.0" onAction="#btnAddItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #67CA16;" text="Add Item " />
+      <JFXButton layoutX="584.0" layoutY="303.0" onAction="#btnDeleteItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #FC0C04;" text="Delete Item" />
+      <JFXButton layoutX="584.0" layoutY="354.0" onAction="#btnUpdateItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #10EDF5;" text="Update Item" />
+      <TextField fx:id="txtUnitPrice" layoutX="70.0" layoutY="301.0" prefHeight="26.0" prefWidth="295.0" promptText="Unit Price" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c6994" height="62.0" layoutX="14.0" layoutY="14.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="547.0" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="27.0" prefHeight="18.0" prefWidth="377.0" text="ITEM ADD FORM" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="33.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="33.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/qr-code_15307862.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/features.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/cal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/sale-tag_17069519.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/prioritize_7778962.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

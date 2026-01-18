@@ -35,6 +35,7 @@ public class CustomerFormcontroller implements Initializable {
             AnchorPane.setBottomAnchor(pane, 0.0);
             AnchorPane.setLeftAnchor(pane, 0.0);
             AnchorPane.setRightAnchor(pane, 0.0);
+            ancCustomer.getChildren().clear();
             ancCustomer.getChildren().setAll(pane);
 
         } catch (IOException e) {
