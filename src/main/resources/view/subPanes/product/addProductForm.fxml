@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="566" prefWidth="1035" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.product.AddProductController">
+<AnchorPane prefHeight="566" prefWidth="1035" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subPane.product.AddProductController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff31" height="387.0" layoutX="14.0" layoutY="14.0" opacity="0.38" stroke="BLACK" strokeType="INSIDE" width="547.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="427.0" layoutX="25.0" layoutY="123.0" opacity="0.11" stroke="BLACK" strokeType="INSIDE" width="527.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f385930" height="545.0" layoutX="14.0" layoutY="16.0" opacity="0.26" stroke="BLACK" strokeType="INSIDE" width="547.0" />
       <TextField fx:id="txtSearchProduct" layoutX="69.0" layoutY="89.0" prefHeight="26.0" prefWidth="295.0" promptText="Search Product" />
-      <JFXButton layoutX="408.0" layoutY="89.0" onAction="#btnSearch" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #F5BF0F;" text="Search" />
-      <TextField fx:id="txtItemCode" layoutX="69.0" layoutY="143.0" prefHeight="26.0" prefWidth="295.0" promptText="Item Code" />
-      <TextField fx:id="txtDescription" layoutX="69.0" layoutY="195.0" prefHeight="26.0" prefWidth="295.0" promptText="Description" />
-      <TextField fx:id="txtPackSize" layoutX="69.0" layoutY="244.0" prefHeight="26.0" prefWidth="295.0" promptText="PackSize" />
-      <TextField fx:id="txtQTY" layoutX="69.0" layoutY="352.0" prefHeight="26.0" prefWidth="295.0" promptText="QtyOnHand" />
-      <JFXButton layoutX="584.0" layoutY="249.0" onAction="#btnAddItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #67CA16;" text="Add Item " />
-      <JFXButton layoutX="584.0" layoutY="303.0" onAction="#btnDeleteItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #FC0C04;" text="Delete Item" />
-      <JFXButton layoutX="584.0" layoutY="354.0" onAction="#btnUpdateItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #10EDF5;" text="Update Item" />
-      <TextField fx:id="txtUnitPrice" layoutX="70.0" layoutY="301.0" prefHeight="26.0" prefWidth="295.0" promptText="Unit Price" />
+      <JFXButton layoutX="459.0" layoutY="89.0" onAction="#btnSearch" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #F5BF0F;" text="Search" />
+      <TextField fx:id="txtItemCode" layoutX="69.0" layoutY="151.0" prefHeight="26.0" prefWidth="206.0" promptText="Item Code" />
+      <TextField fx:id="txtDescription" layoutX="69.0" layoutY="192.0" prefHeight="26.0" prefWidth="250.0" promptText="Name" />
+      <JFXButton layoutX="579.0" layoutY="445.0" onAction="#btnAddItem" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: #67CA16;" text="Add Item " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="732.0" layoutY="445.0" onAction="#btnDeleteItem" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: #FC0C04;" text="Delete Item" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="899.0" layoutY="445.0" onAction="#btnUpdateItem" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #10EDF5;" text="Update Item" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></JFXButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c6994" height="62.0" layoutX="14.0" layoutY="14.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="547.0" />
-      <Label alignment="CENTER" layoutX="36.0" layoutY="27.0" prefHeight="18.0" prefWidth="377.0" text="ITEM ADD FORM" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="36.0" layoutY="27.0" prefHeight="39.0" prefWidth="510.0" text="ADD PRODUCT 'S" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="26.0" />
          </font>
@@ -33,30 +38,119 @@
             <Image url="@../../../Icon/search.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="33.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Icon/qr-code_15307862.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Icon/features.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Icon/cal.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtQTY1" layoutX="333.0" layoutY="151.0" prefHeight="26.0" prefWidth="206.0" promptText="Bar Code" />
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="291.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Icon/sale-tag_17069519.png" />
+            <Image url="@../../../Icon/qr-code_15307862.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="33.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtQTY11" layoutX="69.0" layoutY="236.0" prefHeight="26.0" prefWidth="102.0" promptText="Category Name" />
+      <MenuButton layoutX="180.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="txtQTY111" layoutX="69.0" layoutY="281.0" prefHeight="26.0" prefWidth="250.0" promptText="Unit Price" />
+      <TextField fx:id="txtQTY1111" layoutX="70.0" layoutY="324.0" prefHeight="26.0" prefWidth="250.0" promptText="Quantity" />
+      <TextField fx:id="txtQTY11111" layoutX="69.0" layoutY="366.0" prefHeight="26.0" prefWidth="102.0" promptText="Default Type" />
+      <MenuButton layoutX="181.0" layoutY="366.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="MenuButton">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="txtQTY111111" layoutX="69.0" layoutY="408.0" prefHeight="26.0" prefWidth="102.0" promptText="Type Symbol" />
+      <MenuButton layoutX="181.0" layoutY="408.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="MenuButton">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="txtQTY1111111" layoutX="70.0" layoutY="456.0" prefHeight="26.0" prefWidth="250.0" promptText="Default Unit" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/features.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/list_2299570.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/price-tag_1544730.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/box_14677043.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/heavy_4381630.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icon/module_2581930.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Icon/prioritize_7778962.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f385930" height="385.0" layoutX="579.0" layoutY="16.0" opacity="0.26" stroke="BLACK" strokeType="INSIDE" width="446.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c6994" height="62.0" layoutX="578.0" layoutY="14.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="446.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="286.0" layoutX="593.0" layoutY="92.0" opacity="0.1" stroke="BLACK" strokeType="INSIDE" width="422.0" />
+      <Label layoutX="656.0" layoutY="154.0" prefHeight="18.0" prefWidth="86.0" text="MF - Date :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="736.0" layoutY="151.0" prefHeight="26.0" prefWidth="237.0" />
+      <Label layoutX="655.0" layoutY="190.0" prefHeight="18.0" prefWidth="86.0" text="Exp- Date :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="736.0" layoutY="187.0" prefHeight="26.0" prefWidth="237.0" />
+      <Label layoutX="688.0" layoutY="228.0" prefHeight="18.0" prefWidth="49.0" text="B _N :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="738.0" layoutY="222.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="665.0" layoutY="266.0" prefHeight="18.0" prefWidth="80.0" text="Supplier :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="738.0" layoutY="260.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="659.0" layoutY="298.0" prefHeight="18.0" prefWidth="80.0" text="Company :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="738.0" layoutY="292.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="638.0" layoutY="336.0" prefHeight="18.0" prefWidth="102.0" text="Brand Name :">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="739.0" layoutY="330.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label alignment="CENTER" layoutX="682.0" layoutY="25.0" prefHeight="39.0" prefWidth="262.0" text="Product Info" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
