@@ -85,5 +85,6 @@ public class ProductFormController implements Initializable {
     }
 
     public void btnProductReport(ActionEvent event) {
+
     }
 }
