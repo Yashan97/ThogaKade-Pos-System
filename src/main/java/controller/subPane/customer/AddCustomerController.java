@@ -1,6 +1,8 @@
 package controller.subPane.customer;
 
 
+import Service.custom.CustomerService;
+import Service.custom.impl.CustomerServiceImpl;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
@@ -8,7 +10,6 @@ import javafx.scene.control.TextField;
 import model.Customer;
 import utill.CRUDUtill;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -33,24 +34,12 @@ public class AddCustomerController {
     public void btnSearchCustomer(ActionEvent event) {
         try {
             String keyword ="%"+txtSearchCustomer.getText()+"%";
-            ResultSet resultSet = CRUDUtill.executeQuery("SELECT * FROM Customer WHERE cusID LIKE ? OR cusName LIKE ? OR contactNumber1 LIKE ?",
-                    keyword,keyword,keyword);
-
-            if (resultSet.next()){
-                txtCustomerName.setText(resultSet.getString("cusName"));
-                txtCusId.setText(resultSet.getString("cusID"));
-                txtContactNumber1.setText(String.valueOf(resultSet.getInt("contactNumber1")));
-                txtContactNumber2.setText(String.valueOf(resultSet.getInt("contactNumber2")));
-                txtCity.setText(resultSet.getString("city"));
-                txtAddress.setText(resultSet.getString("address"));
-                txtBlance.setText(String.valueOf(resultSet.getDouble("outStanding")));
-                txtDate.getEditor().setText(resultSet.getString("registerDate"));
-
-                txtSummeryName.setText(resultSet.getString("cusName"));
-                txtSummryID.setText(String.valueOf(resultSet.getInt("cusID")));
-                txtSummryNumber.setText(String.valueOf(resultSet.getInt("contactNumber1")));
-                txtSummeryBlance.setText(String.valueOf(resultSet.getDouble("outStanding")));
-
+            CustomerService customerService = new CustomerServiceImpl();
+            Customer customer = customerService.searchCustomerById(keyword);
+            if (customer == null){
+                new Alert(Alert.AlertType.ERROR,"Cant Find This Customer ").show();
+            }else {
+                txtCusId.setText(String.valueOf(customer.getCusId()));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

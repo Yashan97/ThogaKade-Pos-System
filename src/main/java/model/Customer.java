@@ -20,6 +20,10 @@ public class Customer {
     private Double outStanding;
     private LocalDate registerDate;
     private String customerImg;
+    private  int sId;
+    private int sNumber;
+    private  Double sBlance;
+    private String sName;
 
     public Customer(int cusId, String cusName, int contactNumber1, int contactNumber2, String city, String address, double outStanding) {
         this.cusId = cusId;
@@ -52,5 +56,21 @@ public class Customer {
         this.registerDate= date;
         this.cusId = id;
 
+    }
+
+
+    public Customer(String cusName, int cusID, int contactNumber1, int contactNumber2, String city, String address, double outStanding, String registerDate, String sName, int sId, int sNumber , double sBlance) {
+        this.cusName = cusName;
+        this.cusId =cusID;
+        this.contactNumber1 = contactNumber1;
+        this.contactNumber2 = contactNumber2;
+        this.city = city;
+        this.address = address;
+        this.outStanding = outStanding;
+        this.registerDate = LocalDate.parse(registerDate);
+        this.sName =sName;
+        this.sId = sId;
+        this.sNumber = sNumber;
+        this.sBlance = (Double) sBlance;
     }
 }
