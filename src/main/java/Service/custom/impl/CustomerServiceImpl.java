@@ -6,6 +6,7 @@ import utill.CRUDUtill;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
@@ -32,8 +33,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean deleteCustomer(String id) {
-        return false;
+    public boolean deleteCustomer(String id) throws SQLException {
+        int i = CRUDUtill.executeUpdate("DELETE FROM Customer WHERE cusID = ?", id);
+        return i>0;
     }
 
     @Override
@@ -60,9 +62,21 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return null;
     }
-
+    ArrayList<Customer>customerArrayList = new ArrayList<>();
     @Override
-    public List<Customer> getAll() {
+    public List<Customer> getAll() throws SQLException {
+        ResultSet resultSet = CRUDUtill.executeQuery("SELECT * FROM Customer");
+        while (resultSet.next()){
+            customerArrayList.add(new Customer(
+                    resultSet.getInt(1),
+                    resultSet.getString(2),
+                    resultSet.getInt(3),
+                    resultSet.getInt(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6),
+                    resultSet.getDouble(7)
+            ));
+        }
         return List.of();
     }
 }

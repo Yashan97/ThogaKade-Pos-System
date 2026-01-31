@@ -1,4 +1,4 @@
 package Service;
 
-public interface SuperBo {
+public interface SuperBo  {
 }
